@@ -1,23 +1,161 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CSS/HTML Workshop with Drivy</title>
+    <meta charset="utf-8">
+    <title>Drivy</title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title">
   </head>
   <body>
+         
+    <header class="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img class="logo" src="logo_Haris2.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#section1">Location</a></li>
+            <li><a href="#section2">Nos services</a></li>
+              <li><a href="#section3">Nous contacter</a></li>
+              <li><a href="">En savoir plus sur nous</a></li>
+          </ul>
+          <form action="" class="navbar-form navbar-right">
+
+          </form>
+        </div>
+      </div>
+    </nav>
+      
+    </header>
+      
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+      
+    <div class="item active">
+      <img src="Location2.jpg" alt="...">
+      <div class="carousel-caption">
+          <h2><img src="logo_Haris2.png"></h2>
+          <h2>Avec Drivy, louez votre voiture en un seul clic !</h2>
+      </div>
+    </div>
+      
+    <div class="item">
+      <img src="Haris1.jpg" alt="...">
+      <div class="carousel-caption">
+          <h2>...</h2>
+
+      </div>
+    </div>
+      
+      <div class="item">
+      <img src="Car1.jpg" alt="...">
+      <div class="carousel-caption">
+          <h2>...</h2>
+
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="form-style-5">
+<form>
+<fieldset>
+<legend><span class="number">1</span> Info car</legend>
     <div id="car">
       <input class="model" type="text" placeholder="Car model"/>
       <input class="price-by-day" type="number" placeholder="Price by day"/>
       <input class="price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
+    </div> 
+</fieldset>
+<fieldset>
+<legend><span class="number">2</span> Info location</legend>
+<div id="rental">
       <input class="begin" type="date" placeholder="Rental begin date"/>
       <input class="end" type="date" placeholder="Rental end date"/>
       <input class="distance" type="number" placeholder="Distance in km"/>
       <input class="option" type="checkbox" placeholder="Deductible option"/>
     </div>
+</fieldset>
     <button id="compute">Compute</button>
     <div id="actors"></div>
-    <script id="template" type="x-tmpl-mustache">
+</form>
+</div>
+    <section id="section2" style="background-color: #dfd0b9; padding-top: 50px;">
+      <div class="container">
+        <h2>Nos services</h2>
+
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-2 text-right">
+          <h2>LOCATION</h2>
+          <p>Votre voiture dort au garage? Drivy vous permet de louer votre voiture en tout simplicité</p>
+        </div>
+          
+        <div class="col-sm-4">
+          <h2>SECURITE</h2>
+          <p>N'ayez crainte! Toutes les locations sont assurées par ALLIANZ</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section3" style="background-color: #e2e1e0; padding-top: 20px;">
+      <div class="container">
+        <h2>Nous contacter</h2><br>
+          
+          
+<h4> Nos coordonnées </h4>                 
+<address class="thumbnail"><br>
+  <p>Tèl : 01 50 64 95 24</p>
+    Adresse mail : drivy@gmail.com<br><br><br>
+    <br><br>
+    <h3>Adresse de l'agence :</h3>
+    ZAC des bois Rochefort<br>
+    95240 Cormeilles-en-Parisis <br>
+</address>
+      </div>
+
+    </section>
+      
+
+                <!-- Pied de page (copyright, tous droit réservé...)--> 
+  <footer class="footer">
+    <div class="container">
+      &copy; 2017 DRIVY-www.Drivy.com-Tous droits réservés
+    </div>
+  </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+        
+        <script id="template" type="x-tmpl-mustache">
       {{#actors}}
         <div class="actor">
           <span>{{who}}</span>
